@@ -16,3 +16,11 @@ img {
   display: block;
   max-width: 100%;
 }
+.field {
+  width: 200px;
+  height: 30px;
+  border: 1px solid #a39e9e;
+  background-color: #d9d5d5;
+  text-align: center;
+  margin-top: 8px;
+}
