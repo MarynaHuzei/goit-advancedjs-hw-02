@@ -26,7 +26,6 @@ function onSubmitForm(evt) {
   let inputAmount = Number(amount.value);
 
   for (let i = 1; i <= inputAmount; i += 1) {
-    inputDelay += inputStep;
     createPromise(i, inputDelay)
       .then(({ position, delay }) => {
         iziToast.success({
@@ -40,6 +39,7 @@ function onSubmitForm(evt) {
           position: 'topRight',
         });
       });
-    evt.currentTarget.reset();
+    inputDelay += inputStep;
   }
+  evt.currentTarget.reset();
 }
